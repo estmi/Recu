@@ -1,0 +1,12 @@
+C:\Users\estmi\Desktop\AturXSexeRecuSergi\Library\bin\Debug\net5.0\_Library.deps.json
+C:\Users\estmi\Desktop\AturXSexeRecuSergi\Library\bin\Debug\net5.0\_Library.dll
+C:\Users\estmi\Desktop\AturXSexeRecuSergi\Library\bin\Debug\net5.0\_Library.pdb
+C:\Users\estmi\Desktop\AturXSexeRecuSergi\Library\obj\Debug\net5.0\_Library.csproj.AssemblyReference.cache
+C:\Users\estmi\Desktop\AturXSexeRecuSergi\Library\obj\Debug\net5.0\_Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\estmi\Desktop\AturXSexeRecuSergi\Library\obj\Debug\net5.0\_Library.AssemblyInfoInputs.cache
+C:\Users\estmi\Desktop\AturXSexeRecuSergi\Library\obj\Debug\net5.0\_Library.AssemblyInfo.cs
+C:\Users\estmi\Desktop\AturXSexeRecuSergi\Library\obj\Debug\net5.0\_Library.csproj.CoreCompileInputs.cache
+C:\Users\estmi\Desktop\AturXSexeRecuSergi\Library\obj\Debug\net5.0\_Library.dll
+C:\Users\estmi\Desktop\AturXSexeRecuSergi\Library\obj\Debug\net5.0\refint\_Library.dll
+C:\Users\estmi\Desktop\AturXSexeRecuSergi\Library\obj\Debug\net5.0\_Library.pdb
+C:\Users\estmi\Desktop\AturXSexeRecuSergi\Library\obj\Debug\net5.0\ref\_Library.dll

@@ -1,0 +1,51 @@
+﻿<Window x:Class="Client.View.Detall"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client.View"
+        xmlns:vm="clr-namespace:Client.ViewModel"
+        mc:Ignorable="d"
+        Title="Detall" Height="450" Width="800">
+    <Window.DataContext>
+        <vm:ViewModel/>
+    </Window.DataContext>
+    <DockPanel>
+        <Button Content="Modificar" Command="{Binding ModificarRegistreCommand}" DockPanel.Dock="Bottom"/>
+    <Grid DataContext="{Binding CurrentRegister}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Any" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Any}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Mes" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Mes}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Codi districte" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding CodiDistricte}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Nom districte" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding NomDistricte}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Codi barri" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding CodiBarri}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Nom barri" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding NomBarri}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="Sexe" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <ComboBox Grid.Row="6" Grid.Column="1" ItemsSource="{Binding SexeArray}" SelectedValue="{Binding Sexe}"/>
+        <TextBlock Grid.Row="7" Grid.Column="0" Text="Demanda ocupacio" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <ComboBox Grid.Row="7" Grid.Column="1" ItemsSource="{Binding DemandaOcupacioArray}" SelectedValue="{Binding DemandaOcupacio}"/>
+        <TextBlock Grid.Row="8" Grid.Column="0" Text="Nombre" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding Num}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Grid>
+    </DockPanel>
+</Window>
