@@ -5,6 +5,7 @@ using System.Linq;
 using System.Xml.Serialization;
 
 using Client.Model;
+using Client.View;
 
 using Infrastructure;
 
@@ -26,10 +27,18 @@ namespace Client.ViewModel
         public RelayCommand ModificarRegistreCommand { get; set; }
         public RelayCommand ElimiarRegistreCommand { get; set; }
         public RelayCommand ConsultarRegistreCommand { get; set; }
+        public RelayCommand CrearFinestraRegistreCommand { get; set; }
         public ViewModel()
         {
             CrearRegistreCommand = new(CrearRegistreCommandExecute);
             ModificarRegistreCommand = new(ModificarRegistreCommandExecute);
+            CrearFinestraRegistreCommand = new RelayCommand((o) =>
+            {
+                CurrentRegister = new();
+                wndDetall d = new wndDetall() { DataContext = this };
+                d.Show();
+
+            });
             controller.Actions[controller.CommandsDictionary[AturXSexe.Commands.Llistar]](null, null, out var msg);
             Registres = new ObservableCollection<Registre>(XMLtoDict<int, Registre>(msg).Select(x => x.Value).ToList());
         }

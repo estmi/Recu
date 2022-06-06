@@ -28,7 +28,7 @@ namespace WhatsApp_Server
             using StringWriter stringWriter = new();
 
             int idx = 0;
-            XmlSerializer serializer = new(typeof(Library.Item<K, V>[]),
+            XmlSerializer serializer = new(typeof(Library.Item<int, V>[]),
                              new XmlRootAttribute() { ElementName = "items" });
             serializer.Serialize(stringWriter,
                 dict.Select(kv => new Item<int, V>() { id = idx++, value = kv.Value }).ToArray());

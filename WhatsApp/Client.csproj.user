@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="View\Detall.xaml.cs">
+    <Compile Update="View\wndDetall.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\wndLlista.xaml.cs">
@@ -15,7 +15,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="View\Detall.xaml">
+    <Page Update="View\wndDetall.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\wndLlista.xaml">

@@ -12,7 +12,7 @@
     </Window.DataContext>
     <DockPanel>
         <ToolBar DockPanel.Dock="Top">
-            <Button Content="Crear" Command="{Binding CrearRegistreCommand}"/>
+            <Button Content="Crear" Command="{Binding CrearFinestraRegistreCommand}"/>
             <Button Content="Eliminar" Command="{Binding ElimiarRegistreCommand}"/>
             <Button Content="Consultar" Command="{Binding ConsultarRegistreCommand}"/>
         </ToolBar>
