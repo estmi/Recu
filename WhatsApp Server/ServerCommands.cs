@@ -51,7 +51,7 @@ namespace WhatsApp_Server
                     NomBarri = opcions["NomBarri"],
                     Sexe = opcions["Sexe"] == Sexe.Dones.ToString() ? Sexe.Dones : Sexe.Homes,
                     DemandaOcupacio = opcions["DemandaOcupacio"] == DemandaOcupacio.AturRegistrat.ToString() ? DemandaOcupacio.AturRegistrat : DemandaOcupacio.DemandaNoAturats,
-                    Num = int.Parse(opcions["Nombre"]),
+                    Num = int.Parse(opcions["Num"]),
                 };
                 server.Registres.Add((aux.Any, aux.Mes, aux.CodiDistricte, aux.CodiBarri, aux.Sexe, aux.DemandaOcupacio), aux);
                 return Result.OK;
@@ -78,7 +78,7 @@ namespace WhatsApp_Server
                     NomBarri = opcions["NomBarri"],
                     Sexe = opcions["Sexe"] == Sexe.Dones.ToString() ? Sexe.Dones : Sexe.Homes,
                     DemandaOcupacio = opcions["DemandaOcupacio"] == DemandaOcupacio.AturRegistrat.ToString() ? DemandaOcupacio.AturRegistrat : DemandaOcupacio.DemandaNoAturats,
-                    Num = int.Parse(opcions["Nombre"]),
+                    Num = int.Parse(opcions["Num"]),
                 };
                 server.Registres[(aux.Any, aux.Mes, aux.CodiDistricte, aux.CodiBarri, aux.Sexe, aux.DemandaOcupacio)] = aux;
                 return Result.OK;
@@ -99,7 +99,7 @@ namespace WhatsApp_Server
                 {
                     Any = int.Parse(opcions["Any"]),
                     Mes = int.Parse(opcions["Mes"]),
-                    NomDistricte = opcions["NomDistricte"],
+                    CodiDistricte = int.Parse(opcions["CodiDistricte"]),
                     CodiBarri = int.Parse(opcions["CodiBarri"]),
                     Sexe = opcions["Sexe"] == Sexe.Dones.ToString() ? Sexe.Dones : Sexe.Homes,
                     DemandaOcupacio = opcions["DemandaOcupacio"] == DemandaOcupacio.AturRegistrat.ToString() ? DemandaOcupacio.AturRegistrat : DemandaOcupacio.DemandaNoAturats,
@@ -123,7 +123,7 @@ namespace WhatsApp_Server
                 {
                     Any = int.Parse(opcions["Any"]),
                     Mes = int.Parse(opcions["Mes"]),
-                    NomDistricte = opcions["NomDistricte"],
+                    CodiDistricte = int.Parse(opcions["CodiDistricte"]),
                     CodiBarri = int.Parse(opcions["CodiBarri"]),
                     Sexe = opcions["Sexe"] == Sexe.Dones.ToString() ? Sexe.Dones : Sexe.Homes,
                     DemandaOcupacio = opcions["DemandaOcupacio"] == DemandaOcupacio.AturRegistrat.ToString() ? DemandaOcupacio.AturRegistrat : DemandaOcupacio.DemandaNoAturats,

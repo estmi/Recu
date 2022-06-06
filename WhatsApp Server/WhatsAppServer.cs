@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,10 +51,10 @@ namespace WhatsApp_Server
         }
         private static Dictionary<string, String> RespostaHTTP2Dict(string str)
         {
-            Dictionary<String, String> dict = new();
+            ConcurrentDictionary<String, String> dict = new();
             var respostaCamps = str.Split('&');
-            Parallel.ForEach(respostaCamps, camp => { var subCamps = camp.Split('='); dict.Add(subCamps[0], subCamps[1]); });
-            return dict;
+            Parallel.ForEach(respostaCamps, camp => { var subCamps = camp.Split('='); dict.TryAdd(subCamps[0], subCamps[1]); });
+            return dict.ToDictionary(x => x.Key, x => x.Value);
         }
 
     }
