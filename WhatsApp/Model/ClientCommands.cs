@@ -40,7 +40,7 @@ namespace Client.Model
             msg = "";
             if (opcions is null)
                 return Result.Exception;
-            var props = typeof(Registre).GetProperties().Select(x => x.Name).ToList();
+            var props = typeof(Registre).GetProperties().Where(x => x.CanWrite).Select(x => x.Name).ToList();
             if (!props.All(x => opcions.Keys.Contains(x))) return Result.Cancelled;
             using var wc = new WebClient();
             msg = wc.DownloadString(
@@ -66,7 +66,7 @@ namespace Client.Model
             msg = "";
             if (opcions is null)
                 return Result.Exception;
-            var props = typeof(Registre).GetProperties().Where(x => x.PropertyType != typeof(string) || x.Name != nameof(Registre.Num)).Select(x => x.Name).ToList();
+            var props = typeof(Registre).GetProperties().Where(x => x.PropertyType != typeof(string) && x.CanWrite).Select(x => x.Name).ToList();
             if (!props.All(x => opcions.Keys.Contains(x))) return Result.Cancelled;
             using var wc = new WebClient();
             msg = wc.DownloadString(
@@ -79,7 +79,7 @@ namespace Client.Model
             msg = "";
             if (opcions is null)
                 return Result.Exception;
-            var props = typeof(Registre).GetProperties().Where(x => x.PropertyType != typeof(string) || x.Name != nameof(Registre.Num)).Select(x => x.Name).ToList();
+            var props = typeof(Registre).GetProperties().Where(x => x.PropertyType != typeof(string) && x.CanWrite).Select(x => x.Name).ToList();
             if (!props.All(x => opcions.Keys.Contains(x))) return Result.Cancelled;
             using var wc = new WebClient();
             msg = wc.DownloadString(
