@@ -23,5 +23,6 @@ Demanda ocupacio: {DemandaOcupacio}";
         }
         public Sexe[] SexeArray { get => Enum.GetValues<Sexe>(); }
         public DemandaOcupacio[] DemandaOcupacioArray { get => Enum.GetValues<DemandaOcupacio>(); }
+        public bool Modificar;
     }
 }
